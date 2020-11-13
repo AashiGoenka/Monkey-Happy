@@ -78,17 +78,17 @@ if(keyDown("space")) {
 
 function spawnFood(){
   if(frameCount % 80 === 0){
-     banana=createSprite(800, 350, 10, 20);
-     banana.addImage(bananaImage);
-     banana.y=random(200, 300);
-     banana.scale=0.1;
-     banana.velocity=-4;
-     FoodGroup.add(banana);
-     monkey.depth=banana.depth+1;
+    banana=createSprite(600, 250, 40, 10);
+    banana.y=random(120, 200);
+    banana.velocityX=-5;
     banana.lifetime=300;
-    console.log(banana.y);
+    monkey.depth=banana.depth+1;
+    banana.addImage("bananaImage", bananaImage);
+    banana.scale=0.05;
+    FoodGroup.add(banana);
+  }
 }
-}
+
 function spawnObstacles(){
   if(frameCount % 300 === 0){
     obstacle = createSprite(600, 330, 10, 40);
